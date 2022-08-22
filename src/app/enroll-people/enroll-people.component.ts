@@ -7,12 +7,15 @@ import { Component } from '@angular/core';
 })
 export class EnrollPeopleComponent  {
   people: string[] = [];
+  valor:string;
 
-  addPerson(input: HTMLInputElement) {
-    const personName = input.value;
+  addPerson() {
+    //const personName = input.value;
+    const personName = this.valor;
     if (personName) {
       this.people.push(personName);
-      input.value = '';
+      //input.value = '';
+      this.valor=''
     }
   }
 

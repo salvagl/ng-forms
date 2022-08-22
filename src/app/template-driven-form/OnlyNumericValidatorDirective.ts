@@ -17,9 +17,11 @@ import {
   ],
 })
 export class OnlyNumericValidatorDirective implements Validator {
+
   validate(control: AbstractControl): { [key: string]: any } | null {
     return onlyNumericValidator()(control);
   }
+
 }
 
 export function onlyNumericValidator(): ValidatorFn {
